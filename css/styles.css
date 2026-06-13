@@ -86,10 +86,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 288px; padding: 12px;
   display: flex; flex-direction: column; gap: 8px;
   border-radius: 12px;
-  background: rgba(30,30,30,.85);
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 8px 32px rgba(0,0,0,.4);
+  background: rgba(30,30,30,.45);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
   z-index: 60;
   animation: popIn .2s ease-out;
 }
@@ -100,32 +100,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .contact-item {
   display: flex; align-items: center; gap: 12px;
   padding: 10px 12px; border-radius: 8px;
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.06);
   font-size: 14px;
   transition: background .2s, border-color .2s;
 }
-.contact-item:hover { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.3); }
+.contact-item:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); }
 .contact-item svg { width: 16px; height: 16px; flex-shrink: 0; }
 
 @media (max-width: 1023px) {
   .contact-popup {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 32px);
-    max-width: 320px;
+    top: 72px;
+    right: 12px;
+    left: auto;
+    transform: none;
+    width: 288px;
+    max-width: none;
     z-index: 100;
     animation: none;
-    right: auto;
-  }
-  .contact-popup::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.6);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: -1;
   }
 }
 
