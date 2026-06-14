@@ -130,6 +130,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .mobile-menu a { font-size: 24px; font-weight: 500; }
 .mobile-menu a:hover { color: var(--ocean); }
+.mobile-view-count { font-size: 14px; color: var(--muted); margin-top: -16px; }
 
 /* HERO */
 .hero {
@@ -292,7 +293,17 @@ footer { background: #000; border-top: 1px solid var(--border); }
 .footer-social a:hover { color: var(--ocean); }
 .footer-social svg { width: 20px; height: 20px; }
 
-.view-count { font-size: 12px; color: #6b7280; }
+.nav-view-count {
+  font-size: 12px; color: var(--muted);
+  display: flex; align-items: center; gap: 8px;
+}
+.nav-view-count::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: #555;
+}
 
 .trademark {
   padding: 16px 0 32px;
